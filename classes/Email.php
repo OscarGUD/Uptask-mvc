@@ -38,7 +38,7 @@ class Email{
         $mail -> charSet = "UTF-8"; 
         $contenido = '<html>';
         $contenido .= '<p><strong>Hola ' . $this->nombre . '</strong> Has creado tu cuenta en UpTask, solo debes confirmarla presionando el siguiente enlace</p>';
-        $contenido .= '<p>Preciona Aqui: <a href="$_ENV["SERVER_HOST"]confirmar?token=' . $this->token . '">Confirmar Cuenta</a></p>';
+        $contenido .= "<p>Presiona aquí: <a href='" . $_ENV['SERVER_HOST'] . "confirmar?token=" . $this->token . "'>Confirmar Cuenta </a> </p>";
         $contenido .= '<p>Si tu no solicitaste esta cuenta puedes ignorar el mensaje</p>';
         $contenido .= '</html>';
 
@@ -66,7 +66,7 @@ class Email{
         $mail->Charser = 'UTF-8';
         $contenido = '<html>';
         $contenido .= '<p><strong>Hola ' . $this->nombre . '</strong> Has solicitado el reestablecimiento de tu password en UpTask, sigue el siguiente enlace</p>';
-        $contenido .= '<p>Preciona Aqui: <a href="$_ENV["SERVER_HOST"]reestablecer?token=' . $this->token . '">Reestablecer Tu Password</a></p>';
+        $contenido .= "<p>Presiona aquí: <a href='" . $_ENV['SERVER_HOST'] . "reestablecer?token=" . $this->token . "'>Confirmar Cuenta </a> </p>";
         $contenido .= '<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>';
         $contenido .= '</html>';
 
